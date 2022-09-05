@@ -1,0 +1,90 @@
+@import '../mixins.scss';
+@import '../funcs.scss';
+
+$color-mad-yellow: #edb61b;
+
+@mixin LoginToolCommon {
+    height: 42px;
+    line-height: 42px;
+    background: #edb61b;
+}
+
+.b-app-row.m-header {
+    @include AppRow;
+
+    .b-app-cell {
+        @include AppCell;
+        position: relative;
+
+        &:nth-child(2) {
+            @include AppCellConts;
+
+            .e-gohome {
+                position: absolute;
+                left: 0;
+                top: 28px;
+                @include BGedRect(116px, 110px, imgsrc('truity_logo.png'));
+                overflow: hidden;
+                text-indent: -1000px;
+            }
+
+            .b-user-tools-points,
+            .b-menu .b-menu-points {
+                display: flex;
+                flex-direction: row;
+                text-transform: uppercase;
+            }
+
+            .b-user-tools-points,
+            .b-menu {
+                float: right;
+                clear: both;
+
+                a {
+                    margin-left: 30px;
+
+                    &:first-child {
+                        margin-left: 0;
+                    }
+                }
+            }
+
+            .b-user-tools-points {
+                @include LoginToolCommon;
+                display: flex;
+                flex-direction: row;
+                padding-left: 58px;
+
+                a {
+                    color: white;
+                }
+            }
+
+            .b-menu {
+                height: 112px;
+                padding-top: 50px;
+
+                .b-menu-points {
+                    a {
+                        padding-bottom: 2px;
+                        color: #3d3d3d;
+                        border-bottom: 1px solid transparent;
+
+                        &.m-on {
+                            color: $color-mad-yellow;
+                            border-bottom-color: $color-mad-yellow;
+                        }
+                    }
+                }
+            }
+        }
+
+        &:nth-child(3) {
+            span {
+                position: absolute;
+                width: 100%;
+                @include LoginToolCommon;
+            }
+        }
+    }
+}

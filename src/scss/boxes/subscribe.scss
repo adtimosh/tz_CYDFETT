@@ -1,0 +1,46 @@
+$color-mad-yellow: #edb61b;
+
+.b-app-row.m-subscribe {
+    .b-app-cell {
+        padding: 60px 0 58px 0;
+        text-align: center;
+
+        .b-titles {
+            margin-bottom: 16px;
+
+            &.m-remark {
+                color: $color-mad-yellow;
+                text-transform: uppercase;
+            }
+            &.m-offer {
+                @include PayfairDisplay;
+                font-size: 200%;
+            }
+            &.m-info {
+                margin-bottom: 26px;
+            }
+        }
+
+        .b-sub-form {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+
+            input {
+                width: 354px;
+                height: 59.5px;
+                margin-right: 20px;
+                padding: 0 20px;
+                border: none;
+                background: #f1f1f1;
+            }
+
+            button {
+                padding: 20px 65px;
+                color: $color-mad-yellow;
+                text-transform: uppercase;
+                border: 2px solid $color-mad-yellow;
+            }
+        }
+    }
+}

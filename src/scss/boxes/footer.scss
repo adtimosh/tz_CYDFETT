@@ -1,0 +1,67 @@
+.b-app-row.m-footer {
+    .b-app-cell {
+        text-align: center;
+
+        .b-gohome {
+            .e-gohome {
+                display: inline-block;
+                @include BGedRect(116px, 110px, imgsrc('truity_logo.png'));
+                overflow: hidden;
+                text-indent: -1000px;
+            }
+        }
+
+        .b-menu-links {
+            &.m-socials {
+                a {
+                    display: inline-block;
+                    width: 73px;
+                    height: 73px;
+                    overflow: hidden;
+                    text-indent: -1000px;
+                    cursor: pointer;
+
+                    &.m-fb {
+                        background: url(imgsrc('social/icon-facebook.png')) left top no-repeat;
+                    }
+                    &.m-twi {
+                        background: url(imgsrc('social/icon-twitter.png')) left top no-repeat;
+                    }
+                    &.m-g {
+                        background: url(imgsrc('social/icon-googleplus.png')) left top no-repeat;
+                    }
+                    &.m-yt {
+                        background: url(imgsrc('social/icon-youtube.png')) left top no-repeat;
+                    }
+                    &.m-in {
+                        background: url(imgsrc('social/icon-linkedin.png')) left top no-repeat;
+                    }
+                    &.m-p {
+                        background: url(imgsrc('social/icon-pinterest.png')) left top no-repeat;
+                    }
+                }
+            }
+
+            &.m-menu {
+                a {
+                    display: inline-block;
+                    margin-left: 24px;
+                    text-transform: uppercase;
+                    color: #656565;
+
+                    &:first-child {
+                        margin-left: 0;
+                    }
+                }
+                padding-bottom: 50px;
+            }
+        }
+
+        .b-copy {
+            line-height: 42px;
+            color: #7b7b7b;
+            text-transform: uppercase;
+            border-top: 1px solid #dfe1e3;
+        }
+    }
+}

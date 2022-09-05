@@ -1,0 +1,3 @@
+@function imgsrc($imgUri) {
+    @return '/static/img/' + $imgUri + '?[ncc_at]';
+}

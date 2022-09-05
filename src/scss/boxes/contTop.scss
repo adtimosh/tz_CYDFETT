@@ -1,0 +1,46 @@
+@import '../mixins.scss';
+
+.b-app-row.m-cont-top {
+    text-align: center;
+
+    .b-app-cell {
+        height: 334px;
+        background: url(imgsrc('truityasset-test-banner-wide.png')) left top no-repeat;
+
+        .b-h1-block {
+            @include ContWide;
+            margin: auto;
+            padding: 40px 0 0 0;
+            text-align: left;
+
+            ul li, h1 {
+                color: white;
+            }
+
+            h1 {
+                @include PayfairDisplay;
+                
+                span {
+                    display: block;
+                }
+            }
+
+            .e-separator {
+                margin-bottom: 22px;
+            }
+
+            ul.m-iconed {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+
+                li {
+                    margin: 0;
+                    padding: 0 0 0 52px;
+                    background: url(imgsrc('test/test-price-big.png')) left top no-repeat;
+                    line-height: 46px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,29 @@
+@import './mixins.scss';
+@import './funcs.scss';
+
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    @include OpenSans;
+    color: #4d4d4d;
+    background: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+.e-separator {
+    width: 80px;
+    height: 2px;
+    
+    &.m-white {
+        background: white;
+    }
+}

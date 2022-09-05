@@ -1,0 +1,179 @@
+$color-mad-yellow: #edb61b;
+
+.b-app-row.m-cont-bottom {
+    background: #f4f4f4;
+
+    .b-app-cell {
+        text-align: center;
+
+        .b-test-info-tools {
+            height: 68px;
+            padding: 35px 0 0 0;
+            border-bottom: 1px solid #d8d8d8;
+
+            a {
+                display: inline-block;
+                padding-right: 30px;
+                color: $color-mad-yellow;
+                text-transform: uppercase;
+                background: url(imgsrc('test/test-arrow.png')) right center no-repeat;
+
+            }
+        }
+
+        .b-tests-details {
+            display: flex;
+            flex-direction: row;
+            height: 102px;
+            margin: auto;
+            text-align: left;
+            @include ContWide;
+
+            .b-count,
+            .b-section {
+                flex-grow: 2;
+                position: relative;
+                color: #727272;
+
+                >span:first-child {
+                    text-transform: uppercase;
+                }
+            }
+
+            .b-count {
+                margin-top: 42px;
+                padding: 14px 0 0 38px;
+                line-height: 32px;
+                background: url(imgsrc('test/test-questions.png')) left center no-repeat;
+            }
+
+            .b-section {
+                height: 36px;
+                margin-top: 46px;
+                padding-bottom: 10px;
+
+                >span:last-child {
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    height: 8px;
+                    width: 100%;
+                    background: #eaeaea;
+                    border-bottom: 1px solid white;
+
+                    >span {
+                        &:first-child {
+                            float: left;
+                            height: 8px;
+                            background: #8ba1cd;
+                        }
+
+                        &:last-child {
+                            position: absolute;
+                            right: 30px;
+                            bottom: 0;
+                            width: 1px;
+                            height: 17px;
+                            background: #c4c4c4;
+                        }
+                    }
+                }
+            }
+        }
+
+        .b-tests {
+            margin: auto;
+            text-align: left;
+            @include ContWide;
+
+            .b-test {
+                .b-test-row {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    &.m-test-header {
+                        height: 80px;
+                        background: #7b92e6;
+                        text-transform: uppercase;
+                        color: white;
+                    }
+
+                    &.m-test-values {
+                        height: 72px;
+                        border-width: 0 1px 1px 1px;
+                        border-bottom: 1px solid #eaeaea;
+                        border-right: 1px solid #d4d4d4;
+                        border-left: 1px solid #d4d4d4;
+
+                        &:nth-child(even) {
+                            background: white;
+                        }
+
+                        &:nth-child(odd) {
+                            background: #f3f3f3;
+                        }
+
+                        &.m-err {
+                            >* {
+                                color: #ee7777 !important;
+                            }
+                        }
+                    }
+
+                    .b-test-cell {
+                        flex-grow: 2;
+
+                        &.m-question {
+                            width: 546px;
+                            padding: 0 28px;
+                        }
+
+                        &.m-answer {
+                            width: 105px;
+                            text-align: center;
+
+                            .e-checkbox {
+                                display: inline-block;
+                                width: 25px;
+                                height: 25px;
+                                content: " ";
+                                background: url(imgsrc('test/test-checkbox-off.png')) left top no-repeat;
+                                cursor: pointer;
+
+                                &.m-on {
+                                    background-image: url(imgsrc('test/test-checkbox-on.png'));
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .b-test-tools {
+                padding: 34px 0 46px 0;
+                text-align: center;
+
+                button {
+                    padding: 20px 65px;
+                    color: $color-mad-yellow;
+                    text-transform: uppercase;
+                    border: 2px solid $color-mad-yellow;
+                }
+            }
+
+            .b-error {
+                display: none;
+                text-align: center;
+                padding: 15px 0 0 0;
+
+                .e-link {
+                    color: #4d4d4d;
+                    cursor: pointer;
+                    text-decoration: underline;
+                }
+            }    
+        }
+    }
+}
